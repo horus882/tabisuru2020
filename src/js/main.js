@@ -1,10 +1,17 @@
 import 'reset-css/sass/_reset.scss';
 import '../scss/main.scss';
 import '../scss/header.scss';
+import '../scss/index.scss';
 import '../scss/warnings.scss';
 
 import 'jquery';
 import {func, sendEvent, sendEventRdr, sendPage, echo} from './func';
+
+$(window).on('load', function() {
+    setTimeout(function() {
+        $('body').removeClass('page-intro');
+    }, 750);
+});
 
 $('#menu-toggle').click(function() {
 

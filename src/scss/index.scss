@@ -1,0 +1,157 @@
+#index {
+
+    height: 780px;
+
+    .inner {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #banner {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 480px;
+        height: 779px;
+        background: url(../images/index/banner-bg.jpg) center top no-repeat;
+        background-size: 480px auto;
+
+        & > div {
+            position: absolute;
+            overflow: hidden;
+            .plants {
+                width: 100%;
+                height: 100%;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    transition: .5s cubic-bezier(0, 0.55, 0.45, 1);
+                }
+            }
+        }
+
+        .top {
+            top: 50%;
+            left: 50%;
+            width: 500px;
+            height: 500px;
+            transform: translate(-50%, -671px) rotate(45deg);
+            .plants {
+                transform: translate(74px, 74px) rotate(-45deg);
+                &::after {
+                    bottom: 109px;
+                    left: -12px;
+                    width: 535px;
+                    height: 207px;
+                    background: url(../images/index/banner-top-plants.png) 0 0 no-repeat;
+                    background-size: contain;
+                    // transform: translate(90px, 250px) rotate(-45deg);
+                    @at-root {
+                        .page-intro #index #banner .top .plants::after {
+                            opacity: 0;
+                            bottom: -30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right {
+            top: 50%;
+            left: 50%;
+            width: 500px;
+            height: 500px;
+            transform: translate(125px, -339px) rotate(45deg);
+            .plants {
+                transform: translate(-74px, 74px) rotate(-45deg);
+                &::after {
+                    top: 158px;
+                    left: 58px;
+                    width: 169px;
+                    height: 251px;
+                    background: url(../images/index/banner-right-plants.png) 0 0 no-repeat;
+                    background-size: contain;
+                    transition-delay: .15s;
+                    // transform: translate(38px, 298px) rotate(-45deg);
+                    @at-root {
+                        .page-intro #index #banner .right .plants::after {
+                            opacity: 0;
+                            left: -169px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .left {
+            top: 50%;
+            left: 50%;
+            width: 500px;
+            height: 500px;
+            transform: translate(-625px, -339px) rotate(45deg);
+            .plants {
+                transform: translate(74px, -74px) rotate(-45deg);
+                &::after {
+                    top: 148px;
+                    right: 65px;
+                    width: 163px;
+                    height: 285px;
+                    background: url(../images/index/banner-left-plants.png) 0 0 no-repeat;
+                    background-size: contain;
+                    transition-delay: .075s;
+                    // transform: translate(38px, 298px) rotate(-45deg);
+                    @at-root {
+                        .page-intro #index #banner .left .plants::after {
+                            opacity: 0;
+                            right: -163px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .caption {
+        top: 24px;
+        left: 168px;
+        width: 147px;
+        height: 144px;
+        background: url(../images/index/caption.png) 0 0 no-repeat;
+        background-size: contain;
+        transition: background-position .5s cubic-bezier(0, 0.55, 0.45, 1), opacity .5s cubic-bezier(0, 0.55, 0.45, 1);
+        @at-root {
+            .page-intro #index .caption {
+                opacity: 0;
+                background-position: 0 144px;
+            }
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 155px;
+            left: 3px;
+            width: 148px;
+            height: 30px;
+            background: url(../images/index/caption-en.png) 0 0 no-repeat;
+            background-size: contain;
+            transition: background-position .5s cubic-bezier(0, 0.55, 0.45, 1), opacity .5s cubic-bezier(0, 0.55, 0.45, 1);
+            @at-root {
+                .page-intro #index .caption::after {
+                    opacity: 0;
+                    background-position: 0 30px;
+                }
+            }
+        }
+    }
+
+    .text {
+        top: 508px;
+        width: 100%;
+        // margin: 508px 0 0;
+        text-align: center;
+        line-height: 1.605;
+    }
+
+}
