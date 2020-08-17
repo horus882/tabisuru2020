@@ -1,0 +1,147 @@
+/*****************************************
+*                 import                 *
+*****************************************/
+
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+/*****************************************
+*                  body                  *
+*****************************************/
+
+* {outline: 0;}
+
+html {
+    padding-top: 76px;
+	padding-bottom: 85px;
+	overflow-y: scroll;
+	text-size-adjust: none;
+}
+
+body {
+	font-size: 18px;
+    font-family: 'Noto Sans S Chinese', 'sourcehansans-tc', 'source-han-sans-traditional', 'Noto Sans TC', 'Microsoft JhengHei', Tahoma, Verdana, Arial, sans-serif;
+	background-color: #efefef;
+	background-repeat: no-repeat;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+#wrap {
+	position: relative;
+	width: 100%;
+}
+
+#wrap2 {
+	position: relative;
+	overflow: hidden;
+}
+
+.outer {
+	position: relative;
+	width: 100%;
+}
+
+.inner {
+	position: relative;
+	width: 480px;
+	margin: 0 auto;
+}
+
+/*****************************************
+*                  main                  *
+*****************************************/
+
+/*****************************************
+*                 footer                 *
+*****************************************/
+
+/*****************************************
+*                   pop                  *
+*****************************************/
+
+/*****************************************
+*                 loading                *
+*****************************************/
+
+/*****************************************
+*             common settings            *
+*****************************************/
+
+#menu-toggle {
+
+    position: fixed;
+	top: 0;
+	left: 50%;
+	width: 85px;
+	height: 76px;
+	margin-left: 155px;
+	z-index: 5;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	transition: .5s ease-in-out;
+    transform: rotate(0deg);
+    
+    span {
+
+        position: absolute;
+        left: 20px;
+        display: block;
+        width: 46px;
+        height: 4.5px;
+        border-radius: 4.5px;
+        background: #c1c1c1;
+        opacity: 1;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+
+        &:nth-child(1) { top: 20px; }
+        &:nth-child(2), &:nth-child(3) { top: 36px; }
+        &:nth-child(4) { top: 52px; }
+
+        @at-root {
+            #menu-toggle.open {
+                span {
+                    &:nth-child(1) {
+                        width: 0;
+                        top: 44px;
+                        left: 50%;
+                    }
+                    &:nth-child(2) {
+                        transform: rotate(45deg);
+                    }
+                    &:nth-child(3) {
+                        transform: rotate(-45deg);
+                    }
+                    &:nth-child(4) {
+                        width: 0;
+                        top: 44px;
+                        left: 50%;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+.clearfix:after {
+	clear: both;
+	content: '.';
+	display: block;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+.pos-a {position: absolute;}
+
+.flt-r {float: right;}
+.flt-l {float: left;}
+
+.text-hide {font-size: 0; text-indent: -5000px;}
