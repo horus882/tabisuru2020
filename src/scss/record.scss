@@ -80,6 +80,7 @@
             margin: 0 auto 32px;
             background: url(../images/record/coin.png) 0 0 no-repeat;
             background-size: contain;
+            animation: coin-move 2.5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
         }
 
         .text {
@@ -168,6 +169,18 @@
     100% {
         transform: scale(0.75);
         // opacity: 0;
+    }
+}
+
+@keyframes coin-move {
+    0% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(-5px);
     }
 }
 
