@@ -10,6 +10,7 @@ module.exports = {
         port: 7777,
         hot: true,
         inline: true,
+        open: true,
         publicPath: '/dist/'
     },
     devtool: 'inline-source-map',

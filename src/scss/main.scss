@@ -21,7 +21,7 @@ body {
 	font-size: 19px;
     font-family: Arial, 'Noto Sans S Chinese', 'sourcehansans-tc', 'source-han-sans-traditional', 'Noto Sans TC', 'Microsoft JhengHei', Tahoma, Verdana, sans-serif;
     font-weight: 600;
-	background-color: #efefef;
+	background-color: #fff;
 	background-repeat: no-repeat;
 }
 
@@ -137,6 +137,58 @@ a {
                     }
                 }
             }
+        }
+
+    }
+
+    &.open {
+
+        span {
+            // background-color: #fff;
+        }
+
+    }
+
+}
+
+.btns {
+
+    width: 100%;
+    font-size: 0;
+    text-align: center;
+
+    .btn {
+
+        position: relative;
+        display: inline-block;
+        height: 52px;
+        color: #000;
+        font-size: 22.5px;
+        line-height: 52px;
+        padding: 0 30px;
+        letter-spacing: 1px;
+        background: #fff100;
+
+        &::before,
+        &::after {
+
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -26px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 26px 26px 26px 0;
+            border-color: transparent #fff200 transparent transparent;
+
+        }
+
+        &::after {
+            right: -26px;
+            left: auto;
+            border-width: 26px 0 26px 26px;
+            border-color: transparent transparent transparent #fff200;
         }
 
     }

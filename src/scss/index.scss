@@ -1,3 +1,10 @@
+$caption-duration: .65s;
+$products-duration: .65s;
+$plants-duration: .85s;
+$top-plants-delay: .5s;
+$right-plants-delay: .5s;
+$left-plants-delay: .5s;
+
 #index {
 
     height: 780px;
@@ -20,13 +27,14 @@
         & > div {
             position: absolute;
             overflow: hidden;
+            transition: $plants-duration cubic-bezier(0.22, 1, 0.36, 1);
             .plants {
                 width: 100%;
                 height: 100%;
                 &::after {
                     content: '';
                     position: absolute;
-                    transition: .5s cubic-bezier(0, 0.55, 0.45, 1);
+                    transition: $plants-duration cubic-bezier(0.22, 1, 0.36, 1);
                 }
             }
         }
@@ -46,11 +54,13 @@
                     height: 207px;
                     background: url(../images/index/banner-top-plants.png) 0 0 no-repeat;
                     background-size: contain;
+                    transition-delay: $top-plants-delay;
                     // transform: translate(90px, 250px) rotate(-45deg);
                     @at-root {
                         .page-intro #index #banner .top .plants::after {
                             opacity: 0;
                             bottom: -30px;
+                            transform: scale(0.5);
                         }
                     }
                 }
@@ -62,7 +72,13 @@
             left: 50%;
             width: 500px;
             height: 500px;
+            background: #e42020;
             transform: translate(125px, -339px) rotate(45deg);
+            @at-root {
+                .page-intro #index #banner .right {
+                    transform: translate(425px, -339px) rotate(45deg);
+                }
+            }
             .plants {
                 transform: translate(-74px, 74px) rotate(-45deg);
                 &::after {
@@ -72,12 +88,13 @@
                     height: 251px;
                     background: url(../images/index/banner-right-plants.png) 0 0 no-repeat;
                     background-size: contain;
-                    transition-delay: .15s;
+                    transition-delay: $right-plants-delay;
                     // transform: translate(38px, 298px) rotate(-45deg);
                     @at-root {
                         .page-intro #index #banner .right .plants::after {
                             opacity: 0;
                             left: -169px;
+                            transform: scale(0.5);
                         }
                     }
                 }
@@ -89,7 +106,13 @@
             left: 50%;
             width: 500px;
             height: 500px;
+            background: #fff100;
             transform: translate(-625px, -339px) rotate(45deg);
+            @at-root {
+                .page-intro #index #banner .left {
+                    transform: translate(-925px, -339px) rotate(45deg);
+                }
+            }
             .plants {
                 transform: translate(74px, -74px) rotate(-45deg);
                 &::after {
@@ -99,12 +122,13 @@
                     height: 285px;
                     background: url(../images/index/banner-left-plants.png) 0 0 no-repeat;
                     background-size: contain;
-                    transition-delay: .075s;
+                    transition-delay: $left-plants-delay;
                     // transform: translate(38px, 298px) rotate(-45deg);
                     @at-root {
                         .page-intro #index #banner .left .plants::after {
                             opacity: 0;
                             right: -163px;
+                            transform: scale(0.5);
                         }
                     }
                 }
@@ -120,7 +144,7 @@
         height: 144px;
         background: url(../images/index/caption.png) 0 0 no-repeat;
         background-size: contain;
-        transition: background-position .5s cubic-bezier(0, 0.55, 0.45, 1), opacity .5s cubic-bezier(0, 0.55, 0.45, 1);
+        transition: background-position $caption-duration cubic-bezier(0, 0.55, 0.45, 1), opacity $caption-duration cubic-bezier(0, 0.55, 0.45, 1);
         @at-root {
             .page-intro #index .caption {
                 opacity: 0;
@@ -136,7 +160,7 @@
             height: 30px;
             background: url(../images/index/caption-en.png) 0 0 no-repeat;
             background-size: contain;
-            transition: background-position .5s cubic-bezier(0, 0.55, 0.45, 1), opacity .5s cubic-bezier(0, 0.55, 0.45, 1);
+            transition: background-position $caption-duration cubic-bezier(0, 0.55, 0.45, 1), opacity $caption-duration cubic-bezier(0, 0.55, 0.45, 1);
             @at-root {
                 .page-intro #index .caption::after {
                     opacity: 0;
@@ -146,12 +170,63 @@
         }
     }
 
+    .products {
+
+        li .image {transition: $products-duration cubic-bezier(0.34, 1.56, 0.64, 1);}
+        li .name {transition: $products-duration cubic-bezier(0.34, 1.56, 0.64, 1);}
+        li:nth-child(1) .image {transition-delay: .2s;}
+        li:nth-child(2) .image {transition-delay: .25s;}
+        @at-root {
+            .page-intro #index .products li .image {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            .page-intro #index .products li .name {
+                opacity: 0;
+            }
+        }
+
+        li:nth-child(1) {
+            top: 228px;
+            left: 117px;
+        }
+
+        li:nth-child(2) {
+            top: 228px;
+            left: 241px;
+        }
+
+        .name {
+            position: absolute;
+            top: 245px;
+            left: 0;
+            width: 100%;
+            color: #666666;
+            font-size: 14px;
+            text-align: center;
+        }
+        
+    }
+
     .text {
         top: 508px;
         width: 100%;
         // margin: 508px 0 0;
         text-align: center;
         line-height: 1.605;
+        transition: opacity .65s ease-out .5s;
+    }
+
+    .btns {
+        top: 621px;
+        transition: opacity .65s ease-out .55s;
+    }
+
+    @at-root {
+        .page-intro #index .text,
+        .page-intro #index .btns {
+            opacity: 0;
+        }
     }
 
 }
