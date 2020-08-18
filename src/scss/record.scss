@@ -1,0 +1,173 @@
+#record {
+
+    height: auto;
+    min-height: 667px;
+    background: url(../images/common/page-bg.jpg) center top repeat-y;
+    background-size: 480px 116px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 400px;
+        background: rgb(255,255,255);
+        background: -moz-linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 60%);
+        background: -webkit-linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 60%);
+        background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 60%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+        opacity: 0.7;
+    }
+
+    .inner {
+        height: 100%;
+        overflow: hidden;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 364px;
+            height: 182px;
+            margin-left: -182px;
+            background: url(../images/common/page-deco.png) center top no-repeat;
+            background-size: contain;
+            transition: .35s ease-out;
+        }
+        @at-root {
+            .page-intro #record .inner::before {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+        }
+    }
+
+    @at-root {
+        .page-intro #record .caption,
+        .page-intro #record .content {
+            opacity: 0;
+        }
+    }
+
+    .caption {
+        position: relative;
+        font-size: 24px;
+        text-align: center;
+        margin-top: 165px;
+        margin-bottom: 12px;
+        transition: .35s ease-out .25s;
+    }
+
+    .content {
+        transition: .35s ease-out .25s;
+    }
+
+    .part {
+        position: relative;
+        // top: 206px;
+        left: 0;
+        width: 100%;
+    }
+
+    #part-no-result {
+
+        padding-top: 112px;
+
+        .coin {
+            width: 94px;
+            height: 97px;
+            margin: 0 auto 32px;
+            background: url(../images/record/coin.png) 0 0 no-repeat;
+            background-size: contain;
+        }
+
+        .text {
+            color: #7f7f7f;
+            font-size: 18px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .bubble {
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: contain;
+            animation: bubble-scale 1.5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+        }
+
+        .bubble-solid {
+            background-image: url(../images/record/bubble-solid.png);
+        }
+
+        .bubble-dashed {
+            background-image: url(../images/record/bubble-dashed.png);
+        }
+
+        .bubble-1 {
+            top: 117px;
+            left: 132px;
+            width: 14px;
+            height: 14px;
+            animation-delay: -.5s;
+        }
+
+        .bubble-2 {
+            top: 136px;
+            left: 162px;
+            width: 7px;
+            height: 7px;
+            animation-delay: 0s;
+        }
+
+        .bubble-3 {
+            top: 99px;
+            left: 184px;
+            width: 16px;
+            height: 16px;
+            animation-delay: -1s;
+        }
+
+        .bubble-4 {
+            top: 206px;
+            left: 291px;
+            width: 12px;
+            height: 12px;
+            animation-delay: -.5s;
+        }
+
+        .bubble-5 {
+            top: 163px;
+            left: 311px;
+            width: 23px;
+            height: 23px;
+            animation-delay: 0s;
+        }
+
+        .bubble-6 {
+            top: 187px;
+            left: 359px;
+            width: 16px;
+            height: 16px;
+            animation-delay: -1s;
+        }
+
+    }
+
+}
+
+@keyframes bubble-scale {
+    0% {
+        transform: scale(0.75);
+        // opacity: 1;
+    }
+    50% {
+        transform: scale(1.25);
+        // opacity: 1;
+    }
+    100% {
+        transform: scale(0.75);
+        // opacity: 0;
+    }
+}
+

@@ -2,6 +2,8 @@ import 'reset-css/sass/_reset.scss';
 import '../scss/main.scss';
 import '../scss/header.scss';
 import '../scss/index.scss';
+import '../scss/record.scss';
+import '../scss/rule.scss';
 import '../scss/warnings.scss';
 import '../scss/menu.scss';
 

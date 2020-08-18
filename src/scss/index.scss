@@ -220,6 +220,7 @@ $left-plants-delay: .5s;
     .btns {
         top: 621px;
         transition: opacity .65s ease-out .55s;
+        #btn-index-award-list {display: none;}
     }
 
     @at-root {
