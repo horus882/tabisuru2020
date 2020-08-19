@@ -11,11 +11,67 @@ import 'jquery';
 // import Parallax from 'parallax-js';
 import {func, sendEvent, sendEventRdr, sendPage, echo} from './func';
 
-// 載入完成，移除 class: page-intro
+var browser = {
+    isMobile: (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) == true) ? true : false,
+    isiOS: (/iPhone|iPad|iPod/i.test(navigator.userAgent) == true) ? true : false
+}
+
+if (browser.isMobile)   { $('body').addClass('mobile'); }
+if (browser.isiOS)      { $('body').addClass('ios'); }
+
+var Page = new Object();
+
+Page = {
+    Index: {
+        Init: function() {
+            echo('::::: Index :::::');
+        },
+        Loaded: function() {
+            setTimeout(function() {
+                $('body').removeClass('page-intro');
+            }, 750);
+        }
+    },
+    Record: {
+        Element: $('#record'),
+        Init: function() {
+            echo('::::: Record :::::');
+            this.Set();
+        },
+        Loaded: function() {
+            setTimeout(function() {
+                $('body').removeClass('page-intro');
+            }, 750);
+        },
+        Fetch: function() {
+
+        },
+        Set: function() {
+            var delay = 0.3;
+            $(this.Element.find('#part-result .list li')).each(function(index, ele) {
+                $(ele).css('transition-delay', delay + 's');
+                delay += 0.1;
+            });
+        }
+    },
+    Rule: {
+        Init: function() {
+            echo('::::: Rule :::::');
+        },
+        Loaded: function() {
+            setTimeout(function() {
+                $('body').removeClass('page-intro');
+            }, 750);
+        }
+    },
+}
+
+var currentPage = $('body').data('page');
+
+Page[currentPage].Init();
+
 $(window).on('load', function() {
-    setTimeout(function() {
-        $('body').removeClass('page-intro');
-    }, 750);
+    Page[currentPage].Loaded();
 });
 
 // 點擊漢堡

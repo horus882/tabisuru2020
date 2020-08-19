@@ -35,6 +35,16 @@ a {
     }
 }
 
+.input-text {
+    font-size: 19px;
+    font-family: Arial, 'Noto Sans S Chinese', 'sourcehansans-tc', 'source-han-sans-traditional', 'Noto Sans TC', 'Microsoft JhengHei', Tahoma, Verdana, sans-serif;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background: #fff;
+    appearance: none;
+}
+
 #wrap {
 	position: relative;
 	width: 100%;
@@ -69,6 +79,41 @@ a {
     // }
 
 }
+
+.campaign-name {
+    position: relative;
+    width: 240px;
+    height: 55px;
+    margin: 38px auto 72px;
+    background: url(../images/common/campaign-name.png) 0 0 no-repeat;
+    background-size: contain;
+    transition: background-position .65s cubic-bezier(0, 0.55, 0.45, 1), opacity .65s cubic-bezier(0, 0.55, 0.45, 1);
+    @at-root {
+        .page-intro .section .campaign-name {
+            opacity: 0;
+            background-position: 0 55px;
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 63px;
+        left: 59px;
+        width: 123px;
+        height: 34px;
+        background: url(../images/common/campaign-name-en.png) 0 0 no-repeat;
+        background-size: contain;
+        transition: background-position .65s cubic-bezier(0, 0.55, 0.45, 1), opacity .65s cubic-bezier(0, 0.55, 0.45, 1);
+        @at-root {
+            .page-intro .section .campaign-name::after {
+                opacity: 0;
+                background-position: 0 34px;
+            }
+        }
+    }
+}
+
+
 
 /*****************************************
 *                 footer                 *

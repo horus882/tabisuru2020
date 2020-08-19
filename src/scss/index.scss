@@ -31,10 +31,18 @@ $left-plants-delay: .5s;
             .plants {
                 width: 100%;
                 height: 100%;
-                &::after {
+                & > div {
                     content: '';
                     position: absolute;
                     transition: $plants-duration cubic-bezier(0.22, 1, 0.36, 1);
+                }
+                @at-root {
+                    .page-transition-end #index #banner div .plants > div {
+                        transition: none;
+                    }
+                    .page-transition-end.mobile.ios #index #banner div .plants > div {
+                        transition: .15s linear 0s;
+                    }
                 }
             }
         }
@@ -47,7 +55,7 @@ $left-plants-delay: .5s;
             transform: translate(-50%, -671px) rotate(45deg);
             .plants {
                 transform: translate(74px, 74px) rotate(-45deg);
-                &::after {
+                & > div {
                     bottom: 109px;
                     left: -12px;
                     width: 535px;
@@ -57,7 +65,7 @@ $left-plants-delay: .5s;
                     transition-delay: $top-plants-delay;
                     // transform: translate(90px, 250px) rotate(-45deg);
                     @at-root {
-                        .page-intro #index #banner .top .plants::after {
+                        .page-intro #index #banner .top .plants > div {
                             opacity: 0;
                             bottom: -30px;
                             transform: scale(0.5);
@@ -81,7 +89,7 @@ $left-plants-delay: .5s;
             }
             .plants {
                 transform: translate(-74px, 74px) rotate(-45deg);
-                &::after {
+                & > div {
                     top: 158px;
                     left: 58px;
                     width: 169px;
@@ -91,7 +99,7 @@ $left-plants-delay: .5s;
                     transition-delay: $right-plants-delay;
                     // transform: translate(38px, 298px) rotate(-45deg);
                     @at-root {
-                        .page-intro #index #banner .right .plants::after {
+                        .page-intro #index #banner .right .plants > div {
                             opacity: 0;
                             left: -169px;
                             transform: scale(0.5);
@@ -115,7 +123,7 @@ $left-plants-delay: .5s;
             }
             .plants {
                 transform: translate(74px, -74px) rotate(-45deg);
-                &::after {
+                & > div {
                     top: 148px;
                     right: 65px;
                     width: 163px;
@@ -125,7 +133,7 @@ $left-plants-delay: .5s;
                     transition-delay: $left-plants-delay;
                     // transform: translate(38px, 298px) rotate(-45deg);
                     @at-root {
-                        .page-intro #index #banner .left .plants::after {
+                        .page-intro #index #banner .left .plants > div {
                             opacity: 0;
                             right: -163px;
                             transform: scale(0.5);

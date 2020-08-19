@@ -33,7 +33,7 @@
             margin-left: -182px;
             background: url(../images/common/page-deco.png) center top no-repeat;
             background-size: contain;
-            transition: .35s ease-out;
+            transition: .75s cubic-bezier(0.25, 1, 0.5, 1);
         }
         @at-root {
             .page-intro #rule .inner::before {
@@ -54,13 +54,13 @@
         position: relative;
         font-size: 24px;
         text-align: center;
-        margin-top: 165px;
-        margin-bottom: 67px;
-        transition: .35s ease-out .25s;
+        // margin-top: 165px;
+        margin-bottom: 66px;
+        transition: .75s cubic-bezier(0.25, 1, 0.5, 1) .25s;
     }
 
     .content {
-        transition: .35s ease-out .25s;
+        transition: .75s cubic-bezier(0.25, 1, 0.5, 1) .25s;
     }
 
     .wave {
@@ -160,7 +160,7 @@
                     height: 12px;
                     background: #e42020;
                     transform: rotate(45deg);
-                    animation: sublist-dot-rotate 5s linear infinite;
+                    animation: sublist-dot-scale 2.5s linear infinite;
                 }
             }
             &.sublist-blue {
@@ -176,11 +176,14 @@
 
 }
 
-@keyframes sublist-dot-rotate {
+@keyframes sublist-dot-scale {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(45deg) scale(0.75);
+    }
+    50% {
+        transform: rotate(45deg) scale(1);
     }
     100% {
-        transform: rotate(360deg);
+        transform: rotate(45deg) scale(0.75);
     }
 }

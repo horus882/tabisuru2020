@@ -33,7 +33,7 @@
             margin-left: -182px;
             background: url(../images/common/page-deco.png) center top no-repeat;
             background-size: contain;
-            transition: .35s ease-out;
+            transition: .75s cubic-bezier(0.25, 1, 0.5, 1);
         }
         @at-root {
             .page-intro #record .inner::before {
@@ -54,7 +54,7 @@
         position: relative;
         font-size: 24px;
         text-align: center;
-        margin-top: 165px;
+        // margin-top: 165px;
         margin-bottom: 12px;
         transition: .35s ease-out .25s;
     }
@@ -64,10 +64,96 @@
     }
 
     .part {
+        display: none;
         position: relative;
         // top: 206px;
         left: 0;
         width: 100%;
+    }
+
+    #part-result {
+
+        padding-top: 34px;
+
+        .points {
+            position: relative;
+            font-size: 23px;
+            text-align: center;
+            line-height: 30px;
+            margin-bottom: 45px;
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 190px;
+                height: 30px;
+                vertical-align: top;
+                margin: 0 6px 0 0;
+                background: url(../images/record/line_points-logo.png) 0 0 no-repeat;
+                background-size: contain;
+            }
+            span {
+                margin-right: 3px;
+            }
+        }
+
+        .list {
+            width: 425px;
+            margin: 0 auto 30px;
+            padding: 28px 25px 64px;
+            box-sizing: border-box;
+            background: #fff;
+            .text {
+                font-size: 16px;
+                // font-weight: 500;
+                text-align: center;
+                margin-bottom: 17px;
+            }
+            ul {
+                perspective: 500;
+            }
+            li {
+                position: relative;
+                height: 66px;
+                margin-bottom: 15px;
+                padding: 8px 8px 0;
+                box-sizing: border-box;
+                background: #32ab08;
+                transition: .5s ease-out;
+                transform: rotateX(0deg) translateY(0);
+                opacity: 1;
+                @at-root {
+                    .page-intro #record #part-result .list li {
+                        opacity: 0;
+                        transform: rotateX(45deg) translateY(45px);
+                    }
+                }
+            }
+            .input-text {
+                width: 163px;
+                height: 34px;
+                color: #fff;
+                letter-spacing: 1px;
+                text-overflow: ellipsis;
+                padding: 0 10px;
+                border: #fff 7px solid;
+                background: #ff5454;
+            }
+            .link {
+                position: absolute;
+                top: 8px;
+                left: 206px;
+                width: 160px;
+                height: 48px;
+                color: #fff;
+                font-size: 23px;
+                font-weight: 500;
+                line-height: 48px;
+                text-indent: 22px;
+                background: url(../images/record/white-arrow.png) 127px center no-repeat;
+                background-size: 18px 30px;
+            }
+        }
+
     }
 
     #part-no-result {
