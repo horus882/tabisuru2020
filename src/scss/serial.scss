@@ -1,0 +1,356 @@
+#serial {
+
+    height: auto;
+    min-height: 667px;
+    background: url(../images/common/page-bg.jpg) center top repeat-y;
+    background-size: 480px 116px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 400px;
+        background: rgb(255,255,255);
+        background: -moz-linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 60%);
+        background: -webkit-linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 60%);
+        background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 60%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+        opacity: 0.7;
+    }
+
+    .inner {
+        height: 100%;
+        overflow: hidden;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 480px;
+            height: 239px;
+            margin-left: -240px;
+            background: url(../images/serial/page-deco.png) center top no-repeat;
+            background-size: 478px 239px;
+            transform: translateY(-104px);
+            transition: .75s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        @at-root {
+            .page-intro.part-intro #serial .inner::before {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+            .part-intro #serial .inner::before {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+
+    @at-root {
+        .page-intro #serial .caption,
+        .page-intro #serial .content {
+            opacity: 0;
+        }
+    }
+
+    .campaign-name {margin-top: 46px; margin-bottom: 63px;}
+
+    // .caption {
+    //     position: relative;
+    //     font-size: 24px;
+    //     text-align: center;
+    //     // margin-top: 165px;
+    //     margin-bottom: 12px;
+    //     transition: .35s ease-out .25s;
+    // }
+
+    .content {
+        min-height: 500px;
+        transition: .35s ease-out .25s;
+    }
+
+    .part {
+        display: none;
+        position: relative;
+        // top: 206px;
+        left: 0;
+        width: 100%;
+    }
+
+    .btns {margin-bottom: 112px;}
+
+    .btn {
+        display: block;
+        width: 257px;
+        margin: 0 auto 17px;
+    }
+
+    #part-home {
+
+        #serialNumber {
+            display: block;
+            width: 338px;
+            height: 52px;
+            font-size: 23px;
+            letter-spacing: 1px;
+            text-align: center;
+            margin: 0 auto 16px;
+            padding: 0 10px;
+            border: #d53232 7px solid;
+            text-transform: uppercase;
+            background: #fff;
+        }
+
+    }
+
+    #part-congrats {
+
+        > * {
+            transition: .75s cubic-bezier(0.25, 1, 0.5, 1) .25s;
+        }
+
+        .caption {
+            width: 324px;
+            height: 46px;
+            margin: 58px auto 15px;
+            background: url(../images/serial/part-congrats-title.png) 0 0 no-repeat;
+            background-size: contain;
+        }
+
+        > .text {
+            font-size: 24px;
+            text-align: center;
+            text-indent: 1em;
+            margin-bottom: 14px;
+        }
+
+        .points {
+            font-size: 23px;
+            line-height: 30px;
+            text-align: center;
+            img {
+                margin: 0 13px;
+                vertical-align: top;
+            }
+        }
+
+        .animation {
+            position: relative;
+            height: 157px;
+            .coin {
+                position: absolute;
+                width: 86px;
+                height: 56px;
+                background: url(../images/serial/coin-green.png) 0 0 no-repeat;
+                background-size: contain;
+                transition: .35s ease-out;
+                &-top {
+                    top: 27px;
+                    left: 210px;
+                    z-index: 3;
+                    transition-delay: .55s;
+                }
+                &-middle {
+                    top: 50px;
+                    left: 188px;
+                    z-index: 2;
+                    transition-delay: .4s;
+                }
+                &-bottom {
+                    top: 75px;
+                    left: 198px;
+                    z-index: 1;
+                    transition-delay: .25s;
+                }
+            }
+            .star {
+                position: absolute;
+                background: url(../images/serial/star.png) 0 0 no-repeat;
+                background-size: contain;
+                animation: bubble-scale 1.5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+                &-1 {
+                    top: 99px;
+                    left: 120px;
+                    width: 11px;
+                    height: 15px;
+                    animation-delay: -.5s;
+                }
+                &-2 {
+                    top: 85px;
+                    left: 134px;
+                    width: 11px;
+                    height: 15px;
+                    opacity: 0.5;
+                    animation-delay: 0s;
+                }
+                &-3 {
+                    top: 96px;
+                    left: 162px;
+                    width: 17px;
+                    height: 23px;
+                    animation-delay: -1s;
+                }
+                &-4 {
+                    top: 67px;
+                    left: 301px;
+                    width: 24px;
+                    height: 33px;
+                    opacity: 0.5;
+                    animation-delay: -.5s;
+                }
+                &-5 {
+                    top: 95px;
+                    left: 318px;
+                    width: 17px;
+                    height: 23px;
+                    animation-delay: 0s;
+                }
+                &-6 {
+                    top: 85px;
+                    left: 344px;
+                    width: 11px;
+                    height: 15px;
+                    opacity: 0.5;
+                    animation-delay: -1s;
+                }
+            }
+        }
+
+        @at-root {
+
+            .part-intro #serial #part-congrats > * {
+                opacity: 0;
+            }
+
+            .part-intro #serial #part-congrats .animation {
+                .coin {
+                    transform: translateY(-100px);
+                    opacity: 0;
+                }
+            }
+
+        }
+
+    }
+
+    #part-loss {
+
+        > * {
+            transition: .75s cubic-bezier(0.25, 1, 0.5, 1) .25s;
+        }
+
+        .caption {
+            width: 215px;
+            height: 46px;
+            margin: 60px auto 8px;
+            background: url(../images/serial/part-loss-title.png) 0 0 no-repeat;
+            background-size: contain;
+        }
+
+        > .text {
+            font-size: 24px;
+            text-align: center;
+            text-indent: 1em;
+            line-height: 38px;
+            span {
+                font-size: 22px;
+            }
+        }
+
+        .extra {
+            width: 274px;
+            font-size: 19px;
+            text-align: center;
+            line-height: 32px;
+            margin: 0 auto 41px;
+            span {
+                color: #32ab08;
+            }
+        }
+
+        .animation {
+            position: relative;
+            height: 196px;
+            .coin {
+                position: absolute;
+                top: 58px;
+                left: 194px;
+                width: 94px;
+                height: 97px;
+                background: url(../images/serial/coin-grey.png) 0 0 no-repeat;
+                background-size: contain;
+                animation: coin-move 2.5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+            }
+
+            .bubble {
+                position: absolute;
+                background-repeat: no-repeat;
+                background-size: contain;
+                animation: bubble-scale 1.5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+                &-solid {
+                    background-image: url(../images/serial/bubble-solid.png);
+                }
+                &-dashed {
+                    background-image: url(../images/serial/bubble-dashed.png);
+                }
+                &-1 {
+                    top: 63px;
+                    left: 132px;
+                    width: 14px;
+                    height: 14px;
+                    animation-delay: -.5s;
+                }
+                &-2 {
+                    top: 82px;
+                    left: 162px;
+                    width: 7px;
+                    height: 7px;
+                    animation-delay: 0s;
+                }
+                &-3 {
+                    top: 45px;
+                    left: 184px;
+                    width: 16px;
+                    height: 16px;
+                    animation-delay: -1s;
+                }
+                &-4 {
+                    top: 152px;
+                    left: 291px;
+                    width: 12px;
+                    height: 12px;
+                    animation-delay: -.5s;
+                }
+                &-5 {
+                    top: 109px;
+                    left: 311px;
+                    width: 23px;
+                    height: 23px;
+                    animation-delay: 0s;
+                }
+                &-6 {
+                    top: 133px;
+                    left: 359px;
+                    width: 16px;
+                    height: 16px;
+                    animation-delay: -1s;
+                }
+
+            }
+
+        }
+
+        @at-root {
+
+            .part-intro #serial #part-loss > * {
+                opacity: 0;
+            }
+
+        }
+
+    }
+
+}
+

@@ -96,64 +96,6 @@
             }
         }
 
-        .list {
-            width: 425px;
-            margin: 0 auto 30px;
-            padding: 28px 25px 64px;
-            box-sizing: border-box;
-            background: #fff;
-            .text {
-                font-size: 16px;
-                // font-weight: 500;
-                text-align: center;
-                margin-bottom: 17px;
-            }
-            ul {
-                perspective: 500;
-            }
-            li {
-                position: relative;
-                height: 66px;
-                margin-bottom: 15px;
-                padding: 8px 8px 0;
-                box-sizing: border-box;
-                background: #32ab08;
-                transition: .5s ease-out;
-                transform: rotateX(0deg) translateY(0);
-                opacity: 1;
-                @at-root {
-                    .page-intro #record #part-result .list li {
-                        opacity: 0;
-                        transform: rotateX(45deg) translateY(45px);
-                    }
-                }
-            }
-            .input-text {
-                width: 163px;
-                height: 34px;
-                color: #fff;
-                letter-spacing: 1px;
-                text-overflow: ellipsis;
-                padding: 0 10px;
-                border: #fff 7px solid;
-                background: #ff5454;
-            }
-            .link {
-                position: absolute;
-                top: 8px;
-                left: 206px;
-                width: 160px;
-                height: 48px;
-                color: #fff;
-                font-size: 23px;
-                font-weight: 500;
-                line-height: 48px;
-                text-indent: 22px;
-                background: url(../images/record/white-arrow.png) 127px center no-repeat;
-                background-size: 18px 30px;
-            }
-        }
-
     }
 
     #part-no-result {
@@ -241,32 +183,5 @@
 
     }
 
-}
-
-@keyframes bubble-scale {
-    0% {
-        transform: scale(0.75);
-        // opacity: 1;
-    }
-    50% {
-        transform: scale(1.25);
-        // opacity: 1;
-    }
-    100% {
-        transform: scale(0.75);
-        // opacity: 0;
-    }
-}
-
-@keyframes coin-move {
-    0% {
-        transform: translateY(-5px);
-    }
-    50% {
-        transform: translateY(5px);
-    }
-    100% {
-        transform: translateY(-5px);
-    }
 }
 

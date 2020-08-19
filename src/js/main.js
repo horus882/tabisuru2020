@@ -2,6 +2,7 @@ import 'reset-css/sass/_reset.scss';
 import '../scss/main.scss';
 import '../scss/header.scss';
 import '../scss/index.scss';
+import '../scss/serial.scss';
 import '../scss/record.scss';
 import '../scss/rule.scss';
 import '../scss/warnings.scss';
@@ -32,6 +33,16 @@ Page = {
             }, 750);
         }
     },
+    Serial: {
+        Init: function() {
+            echo('::::: Serial :::::');
+        },
+        Loaded: function() {
+            setTimeout(function() {
+                $('body').removeClass('page-intro');
+            }, 750);
+        }
+    },
     Record: {
         Element: $('#record'),
         Init: function() {
@@ -48,7 +59,7 @@ Page = {
         },
         Set: function() {
             var delay = 0.3;
-            $(this.Element.find('#part-result .list li')).each(function(index, ele) {
+            $(this.Element.find('#serial-list li')).each(function(index, ele) {
                 $(ele).css('transition-delay', delay + 's');
                 delay += 0.1;
             });
