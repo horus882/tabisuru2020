@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="./dist/bundle.css">
 </head>
 <body class="page-intro part-intro" data-page="Serial"> <!---->
+    <div id="loading">
+        <div class="percentage">
+            <span>54</span>%
+        </div>
+    </div>
+    <div id="fetching">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10"/>
+            </svg>
+        </div>
+    </div>
     <header id="header">
         <div class="inner">
             <div class="logo"><a href="./" class="text-hide">KIRIN</a></div>
@@ -33,7 +45,7 @@
                                 <p class="caption"></p>
                                 <p class="text">恭喜您中獎！</p>
                                 <div class="points">
-                                    獲得<img src="src/images/serial/line_points-logo.png" width="186"><span class="value">25</span>點
+                                    獲得<img src="src/images/serial/line_points-logo.png" width="186"><span class="value"></span> 點
                                 </div>
                                 <div class="animation">
                                     <div class="coin-top coin"></div>
@@ -50,14 +62,14 @@
                                     <p class="text">以下是您的中獎序號，請至Line兌換頁面兌換</p>
                                     <ul>
                                         <li>
-                                            <input type="text" class="input-text" value="KWMHGAQRTYKWMHGAQRTY" readonly>
+                                            <input id="linePointsSerial" type="text" class="input-text" value="" readonly>
                                             <a class="link" href="#" target="_blank">前往兌換</a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="btns">
                                     <a id="btn-serial-record" class="btn" href="record.html">中獎查詢</a>
-                                    <a id="btn-serial-continue" class="btn" href="https://www.kirin.com.tw/member/?proc=connect&i=12089&s=45ce8bf8b8482d0184e8804c1cbdd5a8d2fb4050415b11963f44f8e9f2de9509&r=https://www.kirin.com.tw/hyoketsu/event/tabisuru2020/serial.php">繼續輸入序號</a>
+                                    <a id="" class="btn btn-serial-continue" href="#">繼續輸入序號</a>
                                 </div>
                             </div>
                             <div id="part-loss" class="part">
@@ -77,7 +89,7 @@
                                 </div>
                                 <div class="btns">
                                     <a id="btn-serial-record" class="btn" href="record.html">中獎查詢</a>
-                                    <a id="btn-serial-continue" class="btn" href="serial.html">繼續輸入序號</a>
+                                    <a id="" class="btn btn-serial-continue" href="serial.html">繼續輸入序號</a>
                                 </div>
                             </div>
                         </div>
