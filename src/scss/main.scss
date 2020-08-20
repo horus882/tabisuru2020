@@ -2,6 +2,7 @@
 *                 import                 *
 *****************************************/
 
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap');
 @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
 /*****************************************
@@ -310,6 +311,7 @@ a {
 .flt-r {float: right;}
 .flt-l {float: left;}
 
+.template {display: none;}
 .text-hide {font-size: 0; text-indent: -5000px;}
 
 @keyframes bubble-scale {
