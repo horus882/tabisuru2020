@@ -270,6 +270,7 @@ a {
         padding: 0 30px;
         letter-spacing: 1px;
         background: #fff100;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
         &::before,
         &::after {

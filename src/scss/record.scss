@@ -1,9 +1,14 @@
+#page-record {
+    background: url(../images/common/page-bg.jpg) center top repeat-y;
+    background-size: 480px 116px;
+}
+
 #record {
 
     height: auto;
     min-height: 667px;
-    background: url(../images/common/page-bg.jpg) center top repeat-y;
-    background-size: 480px 116px;
+    // background: url(../images/common/page-bg.jpg) center top repeat-y;
+    // background-size: 480px 116px;
 
     &::before {
         content: '';
@@ -106,7 +111,7 @@
             width: 94px;
             height: 97px;
             margin: 0 auto 32px;
-            background: url(../images/record/coin.png) 0 0 no-repeat;
+            background: url(../images/record/coin.png?v=2) 0 0 no-repeat;
             background-size: contain;
             animation: coin-move 2.5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
         }

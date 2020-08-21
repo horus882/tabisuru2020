@@ -1,30 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=480, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="./dist/bundle.css">
-</head>
-<body class="page-intro part-intro" data-page="Serial"> <!---->
-    <div id="loading">
-        <div class="percentage">
-            <span>54</span>%
-        </div>
-    </div>
-    <div id="fetching">
-        <div class="loader">
-            <svg class="circular" viewBox="25 25 50 50">
-                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10"/>
-            </svg>
-        </div>
-    </div>
-    <header id="header">
-        <div class="inner">
-            <div class="logo"><a href="./" class="text-hide">KIRIN</a></div>
-        </div>
-    </header>
+<?php include('include/head.php'); ?>
+<body id="page-serial" class="page-intro part-intro" data-page="Serial">
+    <?php include('include/loading.php'); ?>
+    <?php include('include/fetching.php'); ?>
+    <?php include('include/header.php'); ?>
     <div id="wrap">
         <div id="wrap2">
             <main id="main">
@@ -68,7 +48,7 @@
                                     </ul>
                                 </div>
                                 <div class="btns">
-                                    <a id="btn-serial-record" class="btn" href="record.html">中獎查詢</a>
+                                    <a id="btn-serial-record" class="btn" href="record.php">中獎查詢</a>
                                     <a id="" class="btn btn-serial-continue" href="#">繼續輸入序號</a>
                                 </div>
                             </div>
@@ -88,8 +68,8 @@
                                     還有機會抽<br><span>RIMOWA Classic Check-In L 30吋旅行箱</span> 乙個
                                 </div>
                                 <div class="btns">
-                                    <a id="btn-serial-record" class="btn" href="record.html">中獎查詢</a>
-                                    <a id="" class="btn btn-serial-continue" href="serial.html">繼續輸入序號</a>
+                                    <a id="btn-serial-record" class="btn" href="record.php">中獎查詢</a>
+                                    <a id="" class="btn btn-serial-continue" href="#">繼續輸入序號</a>
                                 </div>
                             </div>
                         </div>
@@ -99,23 +79,8 @@
         </div>
     </div>
     <div id="warnings"></div>
-    <div id="pop"></div>
-    <div id="menu" class="">
-        <div class="inner">
-            <div class="title"></div>
-            <div class="products"></div>
-            <div class="btns">
-                <a id="btn-menu-record" class="btn" href="record.html">中獎查詢</a>
-                <a id="btn-menu-rule" class="btn" href="rule.html">活動辦法&獎項</a>
-            </div>
-        </div>
-    </div>
-    <a id="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </a>
+    <?php include('include/pop.php'); ?>
+    <?php include('include/menu.php'); ?>
     <script src="./dist/bundle.js"></script>
 </body>
 </html>

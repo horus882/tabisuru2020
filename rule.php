@@ -1,30 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=480, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="./dist/bundle.css">
-</head>
+<?php include('include/head.php'); ?>
 <body id="page-rule" class="page-intro" data-page="Rule">
-    <div id="loading">
-        <div class="percentage">
-            <span>0</span>%
-        </div>
-    </div>
-    <div id="fetching">
-        <div class="loader">
-            <svg class="circular" viewBox="25 25 50 50">
-                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10"/>
-            </svg>
-        </div>
-    </div>
-    <header id="header">
-        <div class="inner">
-            <div class="logo"><a href="./index.html" class="text-hide">KIRIN</a></div>
-        </div>
-    </header>
+    <?php include('include/loading.php'); ?>
+    <?php include('include/fetching.php'); ?>
+    <?php include('include/header.php'); ?>
     <div id="wrap">
         <div id="wrap2">
             <main id="main">
@@ -169,23 +149,8 @@
         </div>
     </div>
     <div id="warnings"></div>
-    <div id="pop"></div>
-    <div id="menu" class="">
-        <div class="inner">
-            <div class="title"></div>
-            <div class="products"></div>
-            <div class="btns">
-                <a id="btn-menu-record" class="btn" href="record.html">中獎查詢</a>
-                <a id="btn-menu-rule" class="btn" href="rule.html">活動辦法&獎項</a>
-            </div>
-        </div>
-    </div>
-    <a id="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </a>
+    <?php include('include/pop.php'); ?>
+    <?php include('include/menu.php'); ?>
     <script src="./dist/bundle.js"></script>
 </body>
 </html>

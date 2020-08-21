@@ -1,9 +1,14 @@
+#page-serial {
+    background: url(../images/common/page-bg.jpg) center top repeat-y;
+    background-size: 480px 116px;
+}
+
 #serial {
 
     height: auto;
     min-height: 667px;
-    background: url(../images/common/page-bg.jpg) center top repeat-y;
-    background-size: 480px 116px;
+    // background: url(../images/common/page-bg.jpg) center top repeat-y;
+    // background-size: 480px 116px;
 
     &::before {
         content: '';

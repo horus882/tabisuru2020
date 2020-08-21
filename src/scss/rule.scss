@@ -1,9 +1,14 @@
+#page-rule {
+    background: url(../images/common/page-bg.jpg) center top repeat-y;
+    background-size: 480px 116px;
+}
+
 #rule {
 
     height: auto;
     // min-height: 1000px;
-    background: url(../images/common/page-bg.jpg) center top repeat-y;
-    background-size: 480px 116px;
+    // background: url(../images/common/page-bg.jpg) center top repeat-y;
+    // background-size: 480px 116px;
 
     &::before {
         content: '';
@@ -129,6 +134,7 @@
         color: #292929;
         font-size: 16px;
         font-weight: 500;
+        text-align: justify;
         padding: 82px 50px 0;
         margin-bottom: 70px;
         > li {margin-bottom: 32px;}
@@ -144,6 +150,9 @@
         .text {
             line-height: 1.5;
             margin-bottom: 20px;
+            strong {
+                line-height: 3;
+            }
         }
         .sublist {
             line-height: 1.5;

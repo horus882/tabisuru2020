@@ -60,7 +60,7 @@ $left-plants-delay: .5s;
                     left: -12px;
                     width: 535px;
                     height: 207px;
-                    background: url(../images/index/banner-top-plants.png) 0 0 no-repeat;
+                    background: url(../images/index/banner-top-plants.png?v=2) 0 0 no-repeat;
                     background-size: contain;
                     transition-delay: $top-plants-delay;
                     // transform: translate(90px, 250px) rotate(-45deg);
@@ -80,7 +80,8 @@ $left-plants-delay: .5s;
             left: 50%;
             width: 500px;
             height: 500px;
-            background: #e42020;
+            background: url(../images/index/cube-red.jpg) 0 0 repeat;
+            background-size: 50px 50px;
             transform: translate(125px, -339px) rotate(45deg);
             @at-root {
                 .page-intro #index #banner .right {
@@ -114,7 +115,8 @@ $left-plants-delay: .5s;
             left: 50%;
             width: 500px;
             height: 500px;
-            background: #fff100;
+            background: url(../images/index/cube-yellow.jpg) 0 0 repeat;
+            background-size: 50px 50px;
             transform: translate(-625px, -339px) rotate(45deg);
             @at-root {
                 .page-intro #index #banner .left {
