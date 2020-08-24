@@ -6,6 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./dist/bundle.css">
+    <style>
+
+    .page-intro #index #banner .top .plants > div {
+        opacity: 0;
+        bottom: -30px;
+        transform: scale(0.5);
+    }
+    .page-transition-end #index #banner div .plants > div {
+        transition: none;
+    }
+    .page-transition-end.mobile.ios #index #banner div .plants > div {
+        transition: .15s linear 0s;
+    }
+    .page-intro #index #banner .right {
+        transform: translate(425px, -339px) rotate(45deg);
+    }
+    .page-intro #index #banner .right .plants > div {
+        opacity: 0;
+        left: -169px;
+        transform: scale(0.5);
+    }
+    .page-intro #index #banner .left {
+        transform: translate(-925px, -339px) rotate(45deg);
+    }
+    .page-intro #index #banner .left .plants > div {
+        opacity: 0;
+        right: -163px;
+        transform: scale(0.5);
+    }
+    .page-intro #index .caption {
+        opacity: 0;
+        background-position: 0 144px;
+    }
+    .page-intro #index .caption::after {
+        opacity: 0;
+        background-position: 0 30px;
+    }
+    .page-intro #index .products li .image {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    .page-intro #index .products li .name {
+        opacity: 0;
+    }
+    .page-intro #index .text,
+    .page-intro #index .btns {
+        opacity: 0;
+    }
+
+    </style>
 </head>
 <body id="page-index" class="page-intro" data-page="Index">
     <div id="loading">
@@ -53,8 +103,8 @@
                             </li>
                         </ul>
                         <p class="text pos-a">
-                            即日起加入KIRIN會員<br>
-                            至「全家便利商店」購買冰結旅途調酒<br>
+                            KIRIN會員至「全家便利商店」<br>
+                            購買冰結旅途調酒<br>
                             <strong>RIMOWA</strong>旅行箱與<strong>LINE POINTS</strong>等你帶回家！
                         </p>
                         <div class="btns pos-a">

@@ -4,7 +4,54 @@ $plants-duration: .85s;
 $top-plants-delay: .5s;
 $right-plants-delay: .5s;
 $left-plants-delay: .5s;
-
+/*
+.page-intro #index #banner .top .plants > div {
+    opacity: 0;
+    bottom: -30px;
+    transform: scale(0.5);
+}
+.page-transition-end #index #banner div .plants > div {
+    transition: none;
+}
+.page-transition-end.mobile.ios #index #banner div .plants > div {
+    transition: .15s linear 0s;
+}
+.page-intro #index #banner .right {
+    transform: translate(425px, -339px) rotate(45deg);
+}
+.page-intro #index #banner .right .plants > div {
+    opacity: 0;
+    left: -169px;
+    transform: scale(0.5);
+}
+.page-intro #index #banner .left {
+    transform: translate(-925px, -339px) rotate(45deg);
+}
+.page-intro #index #banner .left .plants > div {
+    opacity: 0;
+    right: -163px;
+    transform: scale(0.5);
+}
+.page-intro #index .caption {
+    opacity: 0;
+    background-position: 0 144px;
+}
+.page-intro #index .caption::after {
+    opacity: 0;
+    background-position: 0 30px;
+}
+.page-intro #index .products li .image {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+.page-intro #index .products li .name {
+    opacity: 0;
+}
+.page-intro #index .text,
+.page-intro #index .btns {
+    opacity: 0;
+}
+*/
 #index {
 
     height: 780px;
@@ -36,14 +83,6 @@ $left-plants-delay: .5s;
                     position: absolute;
                     transition: $plants-duration cubic-bezier(0.22, 1, 0.36, 1);
                 }
-                @at-root {
-                    .page-transition-end #index #banner div .plants > div {
-                        transition: none;
-                    }
-                    .page-transition-end.mobile.ios #index #banner div .plants > div {
-                        transition: .15s linear 0s;
-                    }
-                }
             }
         }
 
@@ -64,13 +103,6 @@ $left-plants-delay: .5s;
                     background-size: contain;
                     transition-delay: $top-plants-delay;
                     // transform: translate(90px, 250px) rotate(-45deg);
-                    @at-root {
-                        .page-intro #index #banner .top .plants > div {
-                            opacity: 0;
-                            bottom: -30px;
-                            transform: scale(0.5);
-                        }
-                    }
                 }
             }
         }
@@ -83,11 +115,6 @@ $left-plants-delay: .5s;
             background: url(../images/index/cube-red.jpg) 0 0 repeat;
             background-size: 50px 50px;
             transform: translate(125px, -339px) rotate(45deg);
-            @at-root {
-                .page-intro #index #banner .right {
-                    transform: translate(425px, -339px) rotate(45deg);
-                }
-            }
             .plants {
                 transform: translate(-74px, 74px) rotate(-45deg);
                 & > div {
@@ -99,13 +126,6 @@ $left-plants-delay: .5s;
                     background-size: contain;
                     transition-delay: $right-plants-delay;
                     // transform: translate(38px, 298px) rotate(-45deg);
-                    @at-root {
-                        .page-intro #index #banner .right .plants > div {
-                            opacity: 0;
-                            left: -169px;
-                            transform: scale(0.5);
-                        }
-                    }
                 }
             }
         }
@@ -118,11 +138,6 @@ $left-plants-delay: .5s;
             background: url(../images/index/cube-yellow.jpg) 0 0 repeat;
             background-size: 50px 50px;
             transform: translate(-625px, -339px) rotate(45deg);
-            @at-root {
-                .page-intro #index #banner .left {
-                    transform: translate(-925px, -339px) rotate(45deg);
-                }
-            }
             .plants {
                 transform: translate(74px, -74px) rotate(-45deg);
                 & > div {
@@ -134,13 +149,6 @@ $left-plants-delay: .5s;
                     background-size: contain;
                     transition-delay: $left-plants-delay;
                     // transform: translate(38px, 298px) rotate(-45deg);
-                    @at-root {
-                        .page-intro #index #banner .left .plants > div {
-                            opacity: 0;
-                            right: -163px;
-                            transform: scale(0.5);
-                        }
-                    }
                 }
             }
         }
@@ -155,12 +163,6 @@ $left-plants-delay: .5s;
         background: url(../images/index/caption.png) 0 0 no-repeat;
         background-size: contain;
         transition: background-position $caption-duration cubic-bezier(0, 0.55, 0.45, 1), opacity $caption-duration cubic-bezier(0, 0.55, 0.45, 1);
-        @at-root {
-            .page-intro #index .caption {
-                opacity: 0;
-                background-position: 0 144px;
-            }
-        }
         &::after {
             content: '';
             position: absolute;
@@ -171,12 +173,6 @@ $left-plants-delay: .5s;
             background: url(../images/index/caption-en.png) 0 0 no-repeat;
             background-size: contain;
             transition: background-position $caption-duration cubic-bezier(0, 0.55, 0.45, 1), opacity $caption-duration cubic-bezier(0, 0.55, 0.45, 1);
-            @at-root {
-                .page-intro #index .caption::after {
-                    opacity: 0;
-                    background-position: 0 30px;
-                }
-            }
         }
     }
 
@@ -186,15 +182,6 @@ $left-plants-delay: .5s;
         li .name {transition: $products-duration cubic-bezier(0.34, 1.56, 0.64, 1);}
         li:nth-child(1) .image {transition-delay: .2s;}
         li:nth-child(2) .image {transition-delay: .25s;}
-        @at-root {
-            .page-intro #index .products li .image {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            .page-intro #index .products li .name {
-                opacity: 0;
-            }
-        }
 
         li:nth-child(1) {
             top: 228px;
@@ -231,13 +218,6 @@ $left-plants-delay: .5s;
         top: 621px;
         transition: opacity .65s ease-out .55s;
         #btn-index-award-list {display: none;}
-    }
-
-    @at-root {
-        .page-intro #index .text,
-        .page-intro #index .btns {
-            opacity: 0;
-        }
     }
 
 }

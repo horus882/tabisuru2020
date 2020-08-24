@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
+<head>
+
+<title>旅向世界Cheers！貼紙序號抽獎活動填寫序號 | 台灣麒麟 KIRIN</title>
+<meta property="og:site_name" content="旅向世界Cheers！貼紙序號抽獎活動填寫序號 | 台灣麒麟 KIRIN">
+<meta property="og:title" content="旅向世界Cheers！貼紙序號抽獎活動填寫序號 | 台灣麒麟 KIRIN">
+
 <?php include('include/head.php'); ?>
+</head>
 <body id="page-serial" class="page-intro part-intro" data-page="Serial">
     <?php include('include/loading.php'); ?>
     <?php include('include/fetching.php'); ?>

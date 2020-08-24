@@ -88,7 +88,7 @@ export function sendPage(page, title) {
 
 	if (typeof(gtag) != 'undefined') {
 
-		gtag('config', 'UA-15575589-2', {
+		gtag('config', 'UA-15575589-14', {
 			// 'page_title' : title,
 			'page_path': page
 		});

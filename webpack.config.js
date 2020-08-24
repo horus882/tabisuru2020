@@ -3,7 +3,8 @@ const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-    mode: 'development',
+    // mode: 'development',
+    mode: 'production',
     devServer: {
         contentBase: path.join(__dirname, '/'),
         compress: true,

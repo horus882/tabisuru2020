@@ -28,13 +28,28 @@ Page = {
     },
     Common: {
         Init: function() {
+
             var preloadArray = [
                 './dist/images/common/menu-bg.jpg',
                 './dist/images/common/menu-title.png',
                 './dist/images/common/menu-products.png'
             ];
+
             func.preload(preloadArray);
+
             $('#wrap').css({ 'position': 'fixed' });
+
+            var startDateString = '2020-08-25T16:00:00Z'; // 要減 8 小時
+            var startDate       = new Date(startDateString);
+            var currentDate     = new Date();
+
+            if (currentDate >= startDate) {
+                $('#btn-index-join').show();
+            } else {
+                $('#btn-index-join').hide();
+                alert('活動於 8/26 開始');
+            }
+
         }
     },
     Index: {
@@ -160,8 +175,10 @@ Page = {
                                     $('#part-congrats .points .value').text(resp.data.point);
                                     $('#linePointsSerial').val(resp.data.serial);
                                     $('#part-congrats #serial-list .link').attr('href', 'https://points.line.me/pointcode?pincode=' + resp.data.serial);
+                                    sendPage('/旅向世界Cheers！貼紙序號抽獎活動兌換結果 | 台灣麒麟 KIRIN');
                                 } else if (resp.data.result == 'false' || resp.data.result == false) {
                                     $('#part-loss').show();
+                                    sendPage('/旅向世界Cheers！貼紙序號抽獎活動兌換結果 | 台灣麒麟 KIRIN');
                                 }
                                 setTimeout(function() {
                                     $('body').removeClass('part-intro');
@@ -379,6 +396,8 @@ $('#menu-toggle').click(function() {
 
         $(this).removeClass('open');
 
+        sendEvent('選單', '點擊', '關閉');
+
     } else {
 
         $(this).addClass('open');
@@ -390,6 +409,8 @@ $('#menu-toggle').click(function() {
         });
 
         $(window).scrollTop(0);
+
+        sendEvent('選單', '點擊', '開啟');
 
     }
 
