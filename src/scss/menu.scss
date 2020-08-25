@@ -7,8 +7,10 @@
     width: 100%;
     height: auto;
 	min-height: 100%;
+    padding-bottom: 30px;
     background: url(../images/common/menu-bg.jpg) rgba(255, 255, 255, 1) center top no-repeat;
     background-size: 480px auto;
+    box-sizing: border-box;
     transition: transform .35s ease-out, opacity .35s ease-out;
     transform: translateX(-150%);
     opacity: 0;
@@ -37,7 +39,7 @@
 
     .btns {
 
-        padding-bottom: 70px;
+        // padding-bottom: 70px;
 
         .btn {
             display: block;
