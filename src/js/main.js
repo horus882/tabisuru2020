@@ -66,6 +66,10 @@ Page = {
         },
         Init: function() {
             echo('::::: Index :::::');
+            $('#btn-index-join').click(function(e) {
+                e.preventDefault();
+                alert('活動已結束');
+            });
         },
         Loaded: function() {
             setTimeout(function() {

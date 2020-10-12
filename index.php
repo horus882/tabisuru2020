@@ -106,6 +106,6 @@
     <div id="warnings"></div>
     <?php include('include/pop.php'); ?>
     <?php include('include/menu.php'); ?>
-    <script src="./dist/bundle.js"></script>
+    <script src="./dist/bundle.js?v=20201012"></script>
 </body>
 </html>
