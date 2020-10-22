@@ -44,7 +44,7 @@ Page = {
             var currentDate     = new Date();
 
             if (currentDate >= startDate) {
-                $('#btn-index-join').show();
+                // $('#btn-index-join').show();
             } else {
                 $('#btn-index-join').hide();
                 alert('活動於 8/26 開始');
@@ -66,9 +66,9 @@ Page = {
         },
         Init: function() {
             echo('::::: Index :::::');
+            alert('活動已結束');
             $('#btn-index-join').click(function(e) {
                 e.preventDefault();
-                alert('活動已結束');
             });
         },
         Loaded: function() {
